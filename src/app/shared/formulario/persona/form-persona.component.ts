@@ -187,6 +187,10 @@ export class FormPersonaComponent implements OnInit {
    */
   public validarPersona() {
     this.submitted = true;
+    if (!this._util.validarUltimoDigitoCuil(this.formPersona.get("cuil").value)) {
+      this._mensajeService.cancelado("El numero de cuil es incorrecto, Por favor verifique el Número de Documento o los digitos de CUIL.", [{name:''}]);
+      return;
+    }
     if (this.formPersona.invalid) { // verifico la validación en los campos del formulario
       if (this.formPersona.get('contacto').value.email !== this.formPersona.get('contacto').value.email.toLowerCase()){
         this._mensajeService.cancelado("El email no puede estar en mayusculas!!", [{name:''}]);
