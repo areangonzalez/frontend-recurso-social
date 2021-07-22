@@ -36,10 +36,7 @@
     </tbody>
     <tbody *ngIf="(beneficiariosLista.length > 0)">
       <tr *ngFor="let beneficiario of beneficiariosLista">
-        <td colspan="8">
-          {{beneficiario | json }}
-        </td>
-        <!-- <td scope="row">{{beneficiario.persona.nro_documento}}</td>
+        <td scope="row">{{beneficiario.persona.nro_documento}}</td>
         <td>
           {{beneficiario.persona.apellido}}, {{beneficiario.persona.nombre}}
         </td>
@@ -62,7 +59,7 @@
           <div class="btn-group">
             <modal-info-beneficiario-component [beneficiarioid]="beneficiario.personaid" (cambioEstado)="actualizarLista($event)"></modal-info-beneficiario-component>
           </div>
-        </td> -->
+        </td>
       </tr>
     </tbody>
   </table>
