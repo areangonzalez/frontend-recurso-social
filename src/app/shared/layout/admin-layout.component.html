@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row wrapper min-vh-100 flex-column flex-sm-row">
-    <aside class="col-12 col-sm-2 p-0 background-menu flex-shrink-1">
+    <div class="col-12 col-sm-2 p-0 background-menu flex-shrink-1">
       <nav class="navbar navbar-expand-sm align-items-start flex-sm-column flex-row">
         <div class="logorn-nombre" >
           <img src="../../../assets/img/logoRN.svg" alt="rio_negro" >
@@ -14,6 +14,9 @@
           <div class="mb-2 p-3 text-body border-bottom border-ds" ><i class="fas fa-user-tie"></i> {{nombreUsuario}}</div>
           <ul class="flex-column navbar-nav w-100 justify-content-between">
             <li class="nav-item" [routerLinkActive]="['active']">
+              <a class="nav-link" [routerLink]="['/inicio/reporte/prestaciones']"><i class="fas fa-file-contract"></i> Prestaciones</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['active']">
               <a class="nav-link" [routerLink]="['gestor-usuarios']"><i class="fas fa-users-cog"></i> Gesti&oacute;n de Usuarios</a>
             </li>
             <li class="nav-item">
@@ -22,11 +25,12 @@
           </ul>
         </div>
       </nav>
-    </aside>
+    </div>
 
-    <main class="col py-3 flex-grow-1">
+    <div class="col py-3 flex-grow-1">
       <mensajes-alert></mensajes-alert>
       <router-outlet></router-outlet>
-    </main>
+    </div>
   </div>
 </div>
+
