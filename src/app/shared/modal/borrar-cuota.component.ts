@@ -19,7 +19,7 @@ import { NgbActiveModal, NgbModal, NgbModalConfig, ModalDismissReasons } from '@
 })
 export class BorrarCuotaContent {
 
-  constructor(private activeModal: NgbActiveModal,) { }
+  constructor(private activeModal: NgbActiveModal) { }
   // se confirma el borrado de la cuota
   confirmacion(confirmar: boolean) {
     this.activeModal.close(confirmar);

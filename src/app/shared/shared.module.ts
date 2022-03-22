@@ -24,7 +24,8 @@ import {
   ModalConfirmacionDescargaComponent, ModalConfirmacionDescargaContent,
   ModalGrupoFamiliarComponent, ModalGrupoFamiliarContent,
   ModalBorrarMiembroGrupoFamiliarComponent, ModalBorrarMiembroGrupoFamiliarContent,
-  BorrarCuotaContent, BorrarCuotaComponent
+  BorrarCuotaContent, BorrarCuotaComponent,
+  ModalAltaBajaAlumnoContent, ModalAltaBajaAlumnoComponent
 } from "./modal";
 import { ProgramaComponent } from "./programa";
 
@@ -61,7 +62,8 @@ import { ProgramaComponent } from "./programa";
       FormGrupoFamiliarComponent,
       ModalGrupoFamiliarComponent, ModalGrupoFamiliarContent,
       ModalBorrarMiembroGrupoFamiliarComponent, ModalBorrarMiembroGrupoFamiliarContent,
-      BorrarCuotaContent, BorrarCuotaComponent
+      BorrarCuotaContent, BorrarCuotaComponent,
+      ModalAltaBajaAlumnoContent, ModalAltaBajaAlumnoComponent
     ],
     exports: [
         CommonModule,
@@ -88,7 +90,8 @@ import { ProgramaComponent } from "./programa";
         FormGrupoFamiliarComponent,
         ModalGrupoFamiliarComponent, ModalGrupoFamiliarContent,
         ModalBorrarMiembroGrupoFamiliarComponent, ModalBorrarMiembroGrupoFamiliarContent,
-        BorrarCuotaContent, BorrarCuotaComponent
+        BorrarCuotaContent, BorrarCuotaComponent,
+        ModalAltaBajaAlumnoContent, ModalAltaBajaAlumnoComponent
     ],
     entryComponents: [
       ModalFormPersonaComponent, ModalFormPersonaContent,

@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <h4 class="modal-title">Dar {{(baja == true) ? "alta": "baja"}} prestación</h4>
+  <button type="button" class="close" aria-label="Close" (click)="cancelar()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="formAltaBajaAlumno">
+      <div class="form-group">
+        <label for="motivo_baja">Motivo:</label>
+        <textarea class="form-control" id="motivo_baja" cols="20" rows="3" placeholder="Descripcion..." formControlName="motivo_baja"></textarea>
+      </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" (click)="cancelar()"><span class="oi oi-ban" title="Cancelar" aria-hidden="true"></span> Cancelar</button>
+  <button *ngIf="(baja)" type="button" class="btn btn-success" (click)="confirmar(true)"><i class="fa fa-arrow-down"></i> Si</button>
+  <button *ngIf="(!baja)" type="button" class="btn btn-success" (click)="confirmar(false)"><i class="fa fa-arrow-up"></i> Si</button>
+</div>
