@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
 
     mostrarModuloAlimentar() {
       let mostrar = false;
-      if (this._authentication.loggedIn.programaids !== undefined) {
+      if (this._authentication.loggedIn !== null && this._authentication.loggedIn.programaids !== undefined) {
         let programaids = this._authentication.loggedIn.programaids;
         for (let i = 0; i < programaids.length; i++) {
           if (programaids[i] === 6) {
@@ -66,7 +66,7 @@ export class HeaderComponent implements OnInit {
     }
 
     esAdmin() {
-      return (this._authentication.loggedIn.rol !== 'admin') ? false : true;
+      return (this._authentication.loggedIn && this._authentication.loggedIn.rol !== 'admin') ? false : true;
     }
 
 }
