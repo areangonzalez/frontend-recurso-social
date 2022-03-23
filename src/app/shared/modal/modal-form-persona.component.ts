@@ -9,6 +9,7 @@ import { ModalConfig, BotonDisenio } from 'src/app/core/models';
 export class ModalFormPersonaContent {
   @Input("configModal") public configModal:ModalConfig;
   @Input("personaid") public personaid: any;
+  @Input("esAlumno") public esAlumno: boolean = false;
 
   constructor(public activeModal: NgbActiveModal) {}
   /**
@@ -42,6 +43,7 @@ export class ModalFormPersonaComponent {
   @Input("disenioBoton") public disenioBoton: BotonDisenio;
   @Input("configModal") public configModal: ModalConfig;
   @Input("personaid") public personaid: any;
+  @Input("esAlumno") public esAlumno: boolean = false;
   @Output("obtenerPersona") public obtenerPersona = new EventEmitter();
 
   constructor(
@@ -56,6 +58,7 @@ export class ModalFormPersonaComponent {
     const modalRef = this.modalService.open(ModalFormPersonaContent, {windowClass: 'ventana-xl'});
     modalRef.componentInstance.configModal = this.configModal;
     modalRef.componentInstance.personaid = this.personaid;
+    modalRef.componentInstance.esAlumno = this.esAlumno;
     modalRef.result.then(
       (result) => {
         if (result == 'closed'){

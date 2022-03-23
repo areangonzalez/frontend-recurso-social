@@ -30,7 +30,7 @@
           <td class="text-center" *ngIf="(mostrar)">
             <button type="button" class="btn btn-sm btn-danger" (click)="borrar(persona.id)" ngbTooltip="Borrar Persona" ><i class="far fa-times-circle"></i></button>
           </td>
-          <td class="text-center" *ngIf="(esAlumno)">
+          <td class="text-center" *ngIf="(esAlumno && !mostrar)">
             <modal-alta-baja-alumno-component [datosAlumno]="persona" (actualizarDatos)="confirmarBajaAltaAlumno($event)" [baja]="persona.baja" ></modal-alta-baja-alumno-component>
           </td>
         </tr>

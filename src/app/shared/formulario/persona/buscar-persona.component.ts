@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ChangeDetectorRef, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { PersonaService, MensajesService, ConfiguracionParaPaginarService } from 'src/app/core/services';
 import { ModalConfig, BotonDisenio, ConfigurarPagina } from 'src/app/core/models';
@@ -11,6 +11,7 @@ import { ModalConfig, BotonDisenio, ConfigurarPagina } from 'src/app/core/models
   styleUrls: ['./buscar-persona.component.sass'],
 })
 export class BuscarPersonaComponent implements OnInit {
+  @Input("esAlumno") public esAlumno: boolean = false;
   @Output("personaElegida") public personaElegida = new EventEmitter();
   public busqueda = "";
   public listaPersonas: any = [];

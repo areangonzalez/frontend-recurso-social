@@ -1,5 +1,6 @@
 <form [formGroup]="formPersona">
   <fieldset >
+    {{esAlumno}}
     <div class="d-flex justify-content-between">
       <div class="col-4 pt-1"><hr></div>
       <div class="col-4 text-center"><h3><small class="text-muted">Datos Personales</small></h3></div>
@@ -19,7 +20,7 @@
                 <div *ngIf="formPersona.get('nro_documento').hasError('maxlength')">El número de documento no puede tener mas de 8 digitos.</div>
             </div>
         </div>
-        <div class="form-group col-md-3">
+        <div  class="form-group col-md-3">
             <label for="form-agente-cuil" class="prioridad">Cuil:</label>
             <div class="input-group">
                 <input id="cuil_prin" class="form-control input-cuil-number" type="text" placeholder="##" formControlName="cuil_prin" maxlength="2"

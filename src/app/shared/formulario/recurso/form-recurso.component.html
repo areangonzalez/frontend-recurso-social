@@ -69,7 +69,7 @@
       </div>
       <div class="row" >
         <div class="col-md-12">
-          <shared-buscar-persona (personaElegida)="agregarAlumnos($event)" ></shared-buscar-persona>
+          <shared-buscar-persona (personaElegida)="agregarAlumnos($event)" [esAlumno]="true" ></shared-buscar-persona>
         </div>
       </div>
       <div class="d-flex justify-content-between">
@@ -79,7 +79,7 @@
         </div>
       <div class="row">
         <div class="col-md-12">
-          <shared-lista-persona [personas]="listaAlumnos" (borrarPersona)="borrarAlumno($event)" [mostrar]="(true)"></shared-lista-persona>
+          <shared-lista-persona [personas]="listaAlumnos" (borrarPersona)="borrarAlumno($event)" [esAlumno]="true" [mostrar]="(true)"></shared-lista-persona>
         </div>
       </div>
     </fieldset>

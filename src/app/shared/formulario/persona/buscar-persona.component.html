@@ -4,7 +4,7 @@
       <div class="input-group-append btn-group">
         <button type="button" class="btn btn-primary" (click)="actualizarBusqueda(busqueda)" ngbTooltip="Buscar beneficiario" ><i class="fas fa-search"></i></button>
         <button type="button" class="btn btn-danger" ngbTooltip="Limpiar búsqueda" (click)="limpiarBusqueda()" ><i class="fas fa-trash-alt"></i></button>
-        <modal-form-persona-component class="btn-group" ngbTooltip="Agregar beneficiario" [configModal]="configModal" [disenioBoton]="botonAgregar" (obtenerPersona)="personaCreada($event)"></modal-form-persona-component>
+        <modal-form-persona-component class="btn-group" ngbTooltip="Agregar beneficiario" [configModal]="configModal" [disenioBoton]="botonAgregar" [esAlumno]="esAlumno" (obtenerPersona)="personaCreada($event)"></modal-form-persona-component>
       </div>
     </div>
   </div>
