@@ -42,7 +42,7 @@
           </td>
           <td class="text-center">
             <button type="button" class="btn btn-sm btn-success"  (click)="seleccionarPersona(persona.id, persona)" container="body" ngbTooltip="Seleccionar"><i class="fas fa-check"></i></button>
-            <modal-form-persona-component class="btn-group" ngbTooltip="Editar beneficiario" [configModal]="configModalEdicion" [disenioBoton]="configBotonModal" (obtenerPersona)="personaEditada($event)" [personaid]="persona.id" ></modal-form-persona-component>
+            <modal-form-persona-component class="btn-group" ngbTooltip="Editar beneficiario" [configModal]="configModalEdicion" [esAlumno]="esAlumno" [disenioBoton]="configBotonModal" (obtenerPersona)="personaEditada($event)" [personaid]="persona.id" ></modal-form-persona-component>
           </td>
         </tr>
       </tbody>
