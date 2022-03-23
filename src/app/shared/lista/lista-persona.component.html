@@ -6,6 +6,7 @@
           <th scope="col">Apellido y nombre</th>
           <th class="text-center" scope="col">Dirección / Contacto</th>
           <th scope="col" *ngIf="(mostrar)" ></th>
+          <th scope="col" *ngIf="(esAlumno)" ></th>
         </tr>
       </thead>
       <tbody *ngIf="(personas.length == 0)">
@@ -14,7 +15,7 @@
         </tr>
       </tbody>
       <tbody *ngIf="(personas.length > 0)">
-        <tr *ngFor="let persona of personas">
+        <tr *ngFor="let persona of personas" [ngClass]="{'table-danger': persona.baja}" ngbTooltip="{{persona.motivo_baja}}">
           <td scope="row">{{persona.nro_documento}}</td>
           <td >{{persona.apellido}}, {{persona.nombre}}</td>
           <td class="text-center">
@@ -28,6 +29,9 @@
           </td>
           <td class="text-center" *ngIf="(mostrar)">
             <button type="button" class="btn btn-sm btn-danger" (click)="borrar(persona.id)" ngbTooltip="Borrar Persona" ><i class="far fa-times-circle"></i></button>
+          </td>
+          <td class="text-center" *ngIf="(esAlumno)">
+            <modal-alta-baja-alumno-component [datosAlumno]="persona" (actualizarDatos)="confirmarBajaAltaAlumno($event)" [baja]="persona.baja" ></modal-alta-baja-alumno-component>
           </td>
         </tr>
       </tbody>

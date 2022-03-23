@@ -10,6 +10,17 @@ export class VistaBodyPrestacionGeneralComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if (this.recurso["alumno_lista"] !== undefined && this.recurso["alumno_lista"].length !== 0) {
+      this.armarDatosAlumno();
+    }
+  }
+
+  armarDatosAlumno() {
+    for (let i = 0; i < this.recurso["alumno_lista"].length; i++) {
+      {
+        this.recurso["alumno_lista"][i]["recursoid"] = this.recurso.id;
+      }
+    }
   }
 
 }

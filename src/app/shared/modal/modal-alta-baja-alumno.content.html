@@ -5,15 +5,16 @@
   </button>
 </div>
 <div class="modal-body">
-  <form [formGroup]="formAltaBajaAlumno">
+    <p>¿Esta seguro que desea dar {{(baja == true) ? "alta": "baja"}} al alumno?</p>
+    <form *ngIf="(!baja)" [formGroup]="formAltaBajaAlumno">
       <div class="form-group">
         <label for="motivo_baja">Motivo:</label>
         <textarea class="form-control" id="motivo_baja" cols="20" rows="3" placeholder="Descripcion..." formControlName="motivo_baja"></textarea>
       </div>
-  </form>
+    </form>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-danger" (click)="cancelar()"><span class="oi oi-ban" title="Cancelar" aria-hidden="true"></span> Cancelar</button>
-  <button *ngIf="(baja)" type="button" class="btn btn-success" (click)="confirmar(true)"><i class="fa fa-arrow-down"></i> Si</button>
-  <button *ngIf="(!baja)" type="button" class="btn btn-success" (click)="confirmar(false)"><i class="fa fa-arrow-up"></i> Si</button>
+  <button *ngIf="(!baja)" type="button" class="btn btn-success" (click)="confirmar(true)"><i class="fa fa-arrow-down"></i> Si</button>
+  <button *ngIf="(baja)" type="button" class="btn btn-success" (click)="confirmar(false)"><i class="fa fa-arrow-up"></i> Si</button>
 </div>

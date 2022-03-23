@@ -1,3 +1,3 @@
-<p>
-  modal-alta-baja-alumno works!
-</p>
+<button *ngIf="(!baja)" type="button" class="btn btn-outline-danger btn-sm" ngbTooltip="Dar baja alumno" (click)="abrirModal()" ><i class="fa fa-arrow-down"></i></button>
+<button *ngIf="(baja)" type="button" class="btn btn-outline-success btn-sm" ngbTooltip="Dar alta alumno" (click)="abrirModal()" ><i class="fa fa-arrow-up"></i></button>
+

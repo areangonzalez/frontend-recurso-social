@@ -42,6 +42,10 @@ export class RecursoSocialService implements Resolve<any> {
     return this._apiService.put('/recursos/baja/' + id, params);
   }
 
+  public bajaAlumno(params:object) {
+    return this._apiService.put('/recursos/baja-alumno', params);
+  }
+
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot,

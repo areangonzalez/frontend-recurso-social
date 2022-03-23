@@ -25,7 +25,7 @@ import {
   ModalGrupoFamiliarComponent, ModalGrupoFamiliarContent,
   ModalBorrarMiembroGrupoFamiliarComponent, ModalBorrarMiembroGrupoFamiliarContent,
   BorrarCuotaContent, BorrarCuotaComponent,
-  ModalAltaBajaAlumnoContent, ModalAltaBajaAlumnoComponent
+  ModalAltaBajaAlumnoComponent, ModalAltaBajaAlumnoContent
 } from "./modal";
 import { ProgramaComponent } from "./programa";
 
@@ -91,7 +91,7 @@ import { ProgramaComponent } from "./programa";
         ModalGrupoFamiliarComponent, ModalGrupoFamiliarContent,
         ModalBorrarMiembroGrupoFamiliarComponent, ModalBorrarMiembroGrupoFamiliarContent,
         BorrarCuotaContent, BorrarCuotaComponent,
-        ModalAltaBajaAlumnoContent, ModalAltaBajaAlumnoComponent
+        ModalAltaBajaAlumnoComponent, ModalAltaBajaAlumnoContent
     ],
     entryComponents: [
       ModalFormPersonaComponent, ModalFormPersonaContent,
@@ -104,7 +104,8 @@ import { ProgramaComponent } from "./programa";
       ModalConfirmacionDescargaComponent, ModalConfirmacionDescargaContent,
       ModalGrupoFamiliarComponent, ModalGrupoFamiliarContent,
       ModalBorrarMiembroGrupoFamiliarComponent, ModalBorrarMiembroGrupoFamiliarContent,
-      BorrarCuotaContent, BorrarCuotaComponent
+      BorrarCuotaContent, BorrarCuotaComponent,
+      ModalAltaBajaAlumnoComponent, ModalAltaBajaAlumnoContent
     ]
 })
 export class SharedModule { }

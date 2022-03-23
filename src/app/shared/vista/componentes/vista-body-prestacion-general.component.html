@@ -102,5 +102,5 @@
     <div class="col-4 text-center"><h3><small class="text-muted">Alumnos</small></h3></div>
     <div class="col-4 pt-1"><hr></div>
   </div>
-  <shared-lista-persona *ngIf="(recurso.alumno_lista != undefined && recurso.alumno_lista.length > 0)" [personas]="recurso.alumno_lista" [mostrar]="false"></shared-lista-persona>
+  <shared-lista-persona *ngIf="(recurso.alumno_lista != undefined && recurso.alumno_lista.length > 0)" [personas]="recurso.alumno_lista" [esAlumno]="true" [mostrar]="false"></shared-lista-persona>
 </div>

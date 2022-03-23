@@ -9,4 +9,4 @@ export * from './modal-confirmar-descarga.component';
 export * from './modal-grupo-familiar.component';
 export * from './modal-borrar-miembro-grupo-familiar.component';
 export * from './borrar-cuota.component';
-export * from  './modal-alta-baja-alumno.component';
+export * from './modal-alta-baja-alumno.component';
