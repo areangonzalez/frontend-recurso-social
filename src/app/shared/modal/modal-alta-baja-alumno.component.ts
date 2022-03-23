@@ -30,7 +30,7 @@ export class ModalAltaBajaAlumnoContent {
       respuesta => {
         this._msj.exitoso(respuesta.message, [{name:''}]);
         this.activeModal.close(params);
-      }, error => { this._msj.cancelado(error, [{name:''}]); }
+      }, error => { this._msj.cancelado(error.message, [{name:''}]); }
     )
   }
 
