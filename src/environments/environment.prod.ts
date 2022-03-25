@@ -1,8 +1,8 @@
 /**
  * commit de sistema
- * b01ef7a94f86f5b6f0d2ed227eb0a23850a65efd
+ * f45fe82607c5178108221db352fb5af71ffdfad3
  */
 export const environment = {
   production: true,
-  baseUrl: 'https://prestaciones-sociales-api.rionegro.gov.ar/api'
+  baseUrl: 'http://prestaciones-sociales.local/api'
 };
