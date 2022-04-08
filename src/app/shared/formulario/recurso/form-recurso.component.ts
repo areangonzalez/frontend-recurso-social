@@ -243,7 +243,7 @@ export class FormRecursoComponent implements OnInit {
 
         if (noError) {
           recurso = this.armarParametrosPrestacion(this.formRecurso.value, false);
-          if (this.emprenderOrecrear) { // si es emprender o crear se agrega la lista de alumnos
+          if (this.esEmprender) { // si es emprender
             recurso["alumno_lista"] = listaIdAlumnos;
           }
           this.obtenerDatos.emit(recurso);

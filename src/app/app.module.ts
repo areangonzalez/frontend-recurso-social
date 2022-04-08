@@ -9,7 +9,7 @@ import { PixelSpinnerModule } from "angular-epic-spinners";
 import { AppRoutingModule } from './app-routing.module';
 
 // fake backend provider
-// import { fakeBackendProvider } from "./shared/helpers/fake-backend";
+//import { fakeBackendProvider } from "./shared/helpers/fake-backend";
 
 /* Modulos */
 import { CoreModule } from "./core/core.module";
@@ -56,7 +56,7 @@ import { JwtInterceptor } from './shared/helpers/jwt.interceptor';
     BreadcrumbsService,
 
     // facke-backend providers
-    // fakeBackendProvider
+    //fakeBackendProvider
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

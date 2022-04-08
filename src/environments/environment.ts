@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  // baseUrl: '/apimock'
-  baseUrl: 'http://prestaciones-sociales.local/api'
+  baseUrl: '/apimock'
 };
 
 /*

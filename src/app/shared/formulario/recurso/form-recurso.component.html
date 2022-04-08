@@ -52,15 +52,15 @@
         </div>
       </div>
     </fieldset>
-    <hr class="pt1" *ngIf="(!emprenderOrecrear)">
-    <fieldset *ngIf="(!emprenderOrecrear)">
+    <hr class="pt1" *ngIf="(!esEmprender)">
+    <fieldset *ngIf="(!esEmprender)">
         <div class="float-right">
           <button type="button" class="btn btn-danger" (click)="cancelarForm()"><span class="oi oi-ban" title="Cancelar" aria-hidden="true"></span> Cancelar</button>&nbsp;
           <button type="button" class="btn btn-success" (click)="validarForm()" ><span class="fas fa-save" title="Guardar" aria-hidden="true"></span> Guardar</button>
         </div>
     </fieldset>
   </div>
-  <div class="shadow-sm mb-3 bg-white p-3 rounded" *ngIf="(emprenderOrecrear)">
+  <div class="shadow-sm mb-3 bg-white p-3 rounded" *ngIf="(esEmprender)">
     <fieldset >
       <div class="d-flex justify-content-between">
         <div class="col-4 pt-1"><hr></div>

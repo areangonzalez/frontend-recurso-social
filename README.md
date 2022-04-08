@@ -25,6 +25,17 @@ Una vez completado los pasos anteriores iniciamos el docker que contiene nuestro
 Iniciamos el proyecto con la imagen de docker `trion/ng-cli:7.2.4`:
 
    `docker run -u $(id -u) --rm -p 4200:4200 -v "$PWD":/app trion/ng-cli:7.2.4 ng serve --host 0.0.0.0`
+  
+  - El sistema trabaja con un FAKE-BACKEND para probar el sistema y su funcionamiento.
+  - Para habilitar el uso del "fake-bakend" dirijase al archivo `app.module.ts` que se encuentra dentro de `/src/app`
+  
+    - descomentar las lineas:
+      `import { fakeBackendProvider } from "./shared/helpers/fake-backend";`
+      `fakeBackendProvider` se encuentra dentro `@NgModule` en el `Providers`
+
+  - Datos de ingreso:
+      - Usuario: admin
+      - Contraseña: admins
 
 Mediante docker-compose:
 
