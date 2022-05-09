@@ -234,16 +234,10 @@ export class FormRecursoComponent implements OnInit {
         }
 
         let listaIdAlumnos = this.armarListaAlumno();
-        if (this.esEmprender) {
-          if (listaIdAlumnos.length == 0) {
-            noError = false
-            this._mensajeService.cancelado('La lista de alumnos deberia de tener al menos una persona.', [{name:''}]);
-          }
-        }
 
         if (noError) {
           recurso = this.armarParametrosPrestacion(this.formRecurso.value, false);
-          if (this.esEmprender) { // si es emprender
+          if (this.esEmprender && listaIdAlumnos.length != 0) { // si es emprender y si tiene alumno armo la lista
             recurso["alumno_lista"] = listaIdAlumnos;
           }
           this.obtenerDatos.emit(recurso);
