@@ -57,10 +57,10 @@ export class LoginComponent implements OnInit {
   }
 
   redirigirUsuario(userRol: string) {
-    if (userRol === 'usuario' || userRol === 'admin') {
+    if (userRol === 'soporte') {
+      this.router.navigateByUrl('/admin');
+    } else {
       this.router.navigate(['/inicio']);
-    } else if (userRol === 'soporte') {
-      this.router.navigate(['/admin']);
     }
   }
 }
