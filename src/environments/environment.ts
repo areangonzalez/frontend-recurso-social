@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://prestaciones-sociales-api-test/api'
+  baseUrl: 'http://prestaciones-sociales.local/api'
 };
 
 /*
